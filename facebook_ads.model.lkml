@@ -28,8 +28,8 @@ explore: campaign_performance_reports {
     sql_on: ${campaign_performance_reports.campaign_id} = ${campaigns.id} ;;
   }
   join: ad_groups {
-    relationship: one_to_many
-    sql_on: ${ad_groups.campaign_id} = ${campaigns.id} ;;
+    relationship: many_to_one
+    sql_on: ${campaigns.id} = ${ad_groups.campaign_id} ;;
   }
 
 }
